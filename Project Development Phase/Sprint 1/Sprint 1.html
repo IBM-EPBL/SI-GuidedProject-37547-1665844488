@@ -1,0 +1,438 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <link rel="shortcut icon" href="./favicon.png">
+    <title>app · Streamlit</title>
+    <script type="text/javascript" async="" src="https://cdn.segment.com/analytics.js/v1/iCkMy7ymtJ9qYzQRXkQpnAJEq7D4NyMU/analytics.min.js"></script>
+    <script src="./vendor/viz/viz-1.8.0.min.js" type="javascript/worker"></script>
+    <link href="./static/css/8.3bee90c5.chunk.css" rel="stylesheet">
+    <link href="./static/css/main.739a4783.chunk.css" rel="stylesheet">
+    <style type="text/css">
+      .react-json-view .copy-to-clipboard-container {
+        vertical-align: top;
+        display: none
+      }
+
+      .react-json-view .click-to-add,
+      .react-json-view .click-to-edit,
+      .react-json-view .click-to-remove {
+        display: none
+      }
+
+      .react-json-view .object-content .variable-row:hover .click-to-edit,
+      .react-json-view .object-content .variable-row:hover .click-to-remove,
+      .react-json-view .object-key-val:hover>span>.object-meta-data>.click-to-add,
+      .react-json-view .object-key-val:hover>span>.object-meta-data>.click-to-remove,
+      .react-json-view .object-key-val:hover>span>.object-meta-data>.copy-to-clipboard-container,
+      .react-json-view .variable-row:hover .copy-to-clipboard-container {
+        display: inline-block
+      }
+    </style>
+    <style media=""></style>
+    <style id="detectElementResize" type="text/css">
+      @keyframes resizeanim {
+        from {
+          opacity: 0;
+        }
+
+        to {
+          opacity: 0;
+        }
+      }
+
+      .resize-triggers {
+        animation: 1ms resizeanim;
+        visibility: hidden;
+        opacity: 0;
+      }
+
+      .resize-triggers,
+      .resize-triggers>div,
+      .contract-trigger:before {
+        content: " ";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+        z-index: -1;
+      }
+
+      .resize-triggers>div {
+        background: #eee;
+        overflow: auto;
+      }
+
+      .contract-trigger:before {
+        width: 200%;
+        height: 200%;
+      }
+    </style>
+    <style type="text/css">
+      @font-face {
+        font-family: Roboto;
+        src: url("chrome-extension://mcgbeeipkmelnpldkobichboakdfaeon/css/Roboto-Regular.ttf");
+      }
+    </style>
+    <link rel="stylesheet" type="text/css" href="./static/css/24.3af0e060.chunk.css">
+    <script charset="utf-8" src="./static/js/24.0bc2f845.chunk.js"></script>
+    <script charset="utf-8" src="./static/js/38.5df29aef.chunk.js"></script>
+  </head>
+  <body data-new-gr-c-s-check-loaded="14.1025.0" data-gr-ext-installed="">
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root">
+      <div class="">
+        <div class="withScreencast">
+          <div tabindex="-1">
+            <div class="stApp">
+              <header tabindex="-1">
+                <div class="decoration"></div>
+                <div class="toolbar">
+                  <span id="MainMenu" aria-haspopup="true" aria-expanded="false">
+                    <button class="streamlit-button medium-button icon-button ">
+                      <span class="open-iconic" data-glyph="menu" title="menu" aria-hidden="true"></span>
+                    </button>
+                  </span>
+                </div>
+              </header>
+              <div class="reportview-container">
+                <section class="sidebar">
+                  <div class="sidebar-content">
+                    <div class="sidebar-close">
+                      <button class="streamlit-button medium-button icon-button ">
+                        <span class="open-iconic" data-glyph="x" title="x" aria-hidden="true"></span>
+                      </button>
+                    </div>
+                    <div class="block-container" style="position: relative;">
+                      <div style="overflow: visible; width: 0px;">
+                        <div class="element-container" style="width: 304px;">
+                          <div class="markdown-text-container stMarkdown" style="width: 304px;">
+                            <h2>1. Upload your CSV data</h2>
+                          </div>
+                        </div>
+                        <div class="element-container" style="width: 304px;">
+                          <div class="Widget stFileUploader">
+                            <label>Upload your input CSV file</label>
+                            <section tabindex="0" class="fileUploadDropzone  st-bb st-bc st-bd st-be st-bf st-bg st-b4">
+                              <input accept=".csv" type="file" autocomplete="off" tabindex="-1" style="display: none;">
+                              <div class="st-bh st-bg st-b4">
+                                <i class="material-outlined-icons icon-lg fileUploaderIcon st-bi st-bj" aria-hidden="true">cloud_upload</i>
+                                <div class="st-b4 st-bk">
+                                  <span class="st-bl">Drag and drop file here</span>
+                                  <small class="st-bm st-bn st-bo st-bp st-b4 st-bg">Limit 200MB per file • CSV</small>
+                                </div>
+                              </div>
+                              <button class="streamlit-button small-button primary-button ">Browse files</button>
+                            </section>
+                            <div class="uploadedFiles st-bq st-br st-bs st-bt st-bu st-bv">
+                              <ul></ul>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="element-container" style="width: 304px;">
+                          <div class="markdown-text-container stMarkdown" style="width: 304px;">
+                            <p>
+                              <a href="https://www.kaggle.com/datasets/pavansubhasht/ibm-hr-analytics-attrition-dataset?select=WA_Fn-UseC_-HR-Employee-Attrition.csv" target="_blank" rel="noopener noreferrer">Example CSV input file</a>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="resize-triggers">
+                        <div class="expand-trigger">
+                          <div style="width: 305px; height: 262px;"></div>
+                        </div>
+                        <div class="contract-trigger"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="sidebar-collapse-control">
+                    <button class="streamlit-button medium-button icon-button ">
+                      <span class="open-iconic" data-glyph="chevron-right" title="chevron-right" aria-hidden="true"></span>
+                    </button>
+                  </div>
+                </section>
+                <section class="main" tabindex="0">
+                  <div class="block-container" style="position: relative;">
+                    <div style="overflow: visible; width: 0px;">
+                      <div class="element-container" style="width: 698px;">
+                        <div class="markdown-text-container stMarkdown" style="width: 698px;">
+                          <h1>
+                            <strong>The EDA App</strong>
+                          </h1>
+                          <p>This is the <strong>EDA App</strong> created in Streamlit using the <strong>pandas-profiling</strong> library. </p>
+                          <p>
+                            <strong>Credit:</strong> App built in <code>Python</code> + <code>Streamlit</code> by <a href="https://medium.com/@chanin.nantasenamat" target="_blank" rel="noopener noreferrer">Sharwin, Sherin, Dini, Murugalakshmi</a>
+                            <a href="http://youtube.com/dataprofessor" target="_blank" rel="noopener noreferrer"></a>
+                          </p>
+                          <hr>
+                        </div>
+                      </div>
+                      <div class="element-container" style="width: 698px;">
+                        <div class="stAlert">
+                          <div role="alert" data-baseweb="notification" class="st-ae st-af st-ag st-ah st-ai st-aj st-ak st-al st-am st-b8 st-ao st-ap st-aq st-ar st-as st-at st-au st-av st-aw st-ax st-ay st-az st-b9 st-b1 st-b2 st-b3 st-b4 st-b5 st-b6">
+                            <div class="st-b7">
+                              <div class="markdown-text-container">
+                                <p>Awaiting for CSV file to be uploaded.</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="element-container" style="width: 698px;">
+                        <div class="Widget row-widget stButton" style="width: 698px;">
+                          <button class="streamlit-button small-button primary-button ">Press to use Example Dataset</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="resize-triggers">
+                      <div class="expand-trigger">
+                        <div style="width: 731px; height: 579px;"></div>
+                      </div>
+                      <div class="contract-trigger"></div>
+                    </div>
+                  </div>
+                  <footer>Made with <a href="//streamlit.io">Streamlit</a>
+                  </footer>
+                </section>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class=""></div>
+    </div>
+    <script>
+      ! function(e) {
+        function t(t) {
+          for (var n, c, o = t[0], d = t[1], u = t[2], i = 0, s = []; i < o.length; i++) c = o[i], Object.prototype.hasOwnProperty.call(f, c) && f[c] && s.push(f[c][0]), f[c] = 0;
+          for (n in d) Object.prototype.hasOwnProperty.call(d, n) && (e[n] = d[n]);
+          for (l && l(t); s.length;) s.shift()();
+          return a.push.apply(a, u || []), r()
+        }
+
+        function r() {
+          for (var e, t = 0; t < a.length; t++) {
+            for (var r = a[t], n = !0, c = 1; c < r.length; c++) {
+              var d = r[c];
+              0 !== f[d] && (n = !1)
+            }
+            n && (a.splice(t--, 1), e = o(o.s = r[0]))
+          }
+          return e
+        }
+        var n = {},
+          c = {
+            7: 0
+          },
+          f = {
+            7: 0
+          },
+          a = [];
+
+        function o(t) {
+          if (n[t]) return n[t].exports;
+          var r = n[t] = {
+            i: t,
+            l: !1,
+            exports: {}
+          };
+          return e[t].call(r.exports, r, r.exports, o), r.l = !0, r.exports
+        }
+        o.e = function(e) {
+          var t = [];
+          c[e] ? t.push(c[e]) : 0 !== c[e] && {
+            9: 1,
+            17: 1,
+            18: 1,
+            19: 1,
+            22: 1,
+            23: 1,
+            24: 1,
+            26: 1
+          } [e] && t.push(c[e] = new Promise((function(t, r) {
+            for (var n = "static/css/" + ({} [e] || e) + "." + {
+                0: "31d6cfe0",
+                1: "31d6cfe0",
+                2: "31d6cfe0",
+                3: "31d6cfe0",
+                4: "31d6cfe0",
+                5: "31d6cfe0",
+                9: "0a5b19c0",
+                10: "31d6cfe0",
+                11: "31d6cfe0",
+                12: "31d6cfe0",
+                13: "31d6cfe0",
+                14: "31d6cfe0",
+                15: "31d6cfe0",
+                16: "31d6cfe0",
+                17: "6b25d6a7",
+                18: "50b8cd3f",
+                19: "50b8cd3f",
+                20: "31d6cfe0",
+                21: "31d6cfe0",
+                22: "1f27639d",
+                23: "1f27639d",
+                24: "3af0e060",
+                25: "31d6cfe0",
+                26: "2f14b019",
+                27: "31d6cfe0",
+                28: "31d6cfe0",
+                29: "31d6cfe0",
+                30: "31d6cfe0",
+                31: "31d6cfe0",
+                32: "31d6cfe0",
+                33: "31d6cfe0",
+                34: "31d6cfe0",
+                35: "31d6cfe0",
+                36: "31d6cfe0",
+                37: "31d6cfe0",
+                38: "31d6cfe0",
+                39: "31d6cfe0",
+                40: "31d6cfe0",
+                41: "31d6cfe0",
+                42: "31d6cfe0",
+                43: "31d6cfe0"
+              } [e] + ".chunk.css", f = o.p + n, a = document.getElementsByTagName("link"), d = 0; d < a.length; d++) {
+              var u = (l = a[d]).getAttribute("data-href") || l.getAttribute("href");
+              if ("stylesheet" === l.rel && (u === n || u === f)) return t()
+            }
+            var i = document.getElementsByTagName("style");
+            for (d = 0; d < i.length; d++) {
+              var l;
+              if ((u = (l = i[d]).getAttribute("data-href")) === n || u === f) return t()
+            }
+            var s = document.createElement("link");
+            s.rel = "stylesheet", s.type = "text/css", s.onload = t, s.onerror = function(t) {
+              var n = t && t.target && t.target.src || f,
+                a = new Error("Loading CSS chunk " + e + " failed.\n(" + n + ")");
+              a.code = "CSS_CHUNK_LOAD_FAILED", a.request = n, delete c[e], s.parentNode.removeChild(s), r(a)
+            }, s.href = f, document.getElementsByTagName("head")[0].appendChild(s)
+          })).then((function() {
+            c[e] = 0
+          })));
+          var r = f[e];
+          if (0 !== r)
+            if (r) t.push(r[2]);
+            else {
+              var n = new Promise((function(t, n) {
+                r = f[e] = [t, n]
+              }));
+              t.push(r[2] = n);
+              var a, d = document.createElement("script");
+              d.charset = "utf-8", d.timeout = 120, o.nc && d.setAttribute("nonce", o.nc), d.src = function(e) {
+                return o.p + "static/js/" + ({} [e] || e) + "." + {
+                  0: "83632318",
+                  1: "db9278d9",
+                  2: "8b222c2f",
+                  3: "687378b4",
+                  4: "f1080a57",
+                  5: "035d7acd",
+                  9: "bbbab3d1",
+                  10: "20722f15",
+                  11: "e3d2010f",
+                  12: "8b781481",
+                  13: "c35da0ff",
+                  14: "0dcf363c",
+                  15: "b0ac8399",
+                  16: "8446d0e2",
+                  17: "f210662f",
+                  18: "6ae26374",
+                  19: "680d974f",
+                  20: "69e2e88c",
+                  21: "67116450",
+                  22: "cf162b67",
+                  23: "a66543b2",
+                  24: "0bc2f845",
+                  25: "d8e8ba6d",
+                  26: "6b7911bd",
+                  27: "c6498814",
+                  28: "4d225ac9",
+                  29: "2c2658c3",
+                  30: "05a2a508",
+                  31: "44e936d5",
+                  32: "4a712a3d",
+                  33: "5b6f4207",
+                  34: "43b850aa",
+                  35: "347c2194",
+                  36: "1737bd17",
+                  37: "a68f8714",
+                  38: "5df29aef",
+                  39: "8aa1a841",
+                  40: "58cf9567",
+                  41: "9af49f7d",
+                  42: "69367570",
+                  43: "ce586712"
+                } [e] + ".chunk.js"
+              }(e);
+              var u = new Error;
+              a = function(t) {
+                d.onerror = d.onload = null, clearTimeout(i);
+                var r = f[e];
+                if (0 !== r) {
+                  if (r) {
+                    var n = t && ("load" === t.type ? "missing" : t.type),
+                      c = t && t.target && t.target.src;
+                    u.message = "Loading chunk " + e + " failed.\n(" + n + ": " + c + ")", u.name = "ChunkLoadError", u.type = n, u.request = c, r[1](u)
+                  }
+                  f[e] = void 0
+                }
+              };
+              var i = setTimeout((function() {
+                a({
+                  type: "timeout",
+                  target: d
+                })
+              }), 12e4);
+              d.onerror = d.onload = a, document.head.appendChild(d)
+            } return Promise.all(t)
+        }, o.m = e, o.c = n, o.d = function(e, t, r) {
+          o.o(e, t) || Object.defineProperty(e, t, {
+            enumerable: !0,
+            get: r
+          })
+        }, o.r = function(e) {
+          "undefined" != typeof Symbol && Symbol.toStringTag && Object.defineProperty(e, Symbol.toStringTag, {
+            value: "Module"
+          }), Object.defineProperty(e, "__esModule", {
+            value: !0
+          })
+        }, o.t = function(e, t) {
+          if (1 & t && (e = o(e)), 8 & t) return e;
+          if (4 & t && "object" == typeof e && e && e.__esModule) return e;
+          var r = Object.create(null);
+          if (o.r(r), Object.defineProperty(r, "default", {
+              enumerable: !0,
+              value: e
+            }), 2 & t && "string" != typeof e)
+            for (var n in e) o.d(r, n, function(t) {
+              return e[t]
+            }.bind(null, n));
+          return r
+        }, o.n = function(e) {
+          var t = e && e.__esModule ? function() {
+            return e.default
+          } : function() {
+            return e
+          };
+          return o.d(t, "a", t), t
+        }, o.o = function(e, t) {
+          return Object.prototype.hasOwnProperty.call(e, t)
+        }, o.p = "./", o.oe = function(e) {
+          throw console.error(e), e
+        };
+        var d = this["webpackJsonpstreamlit-browser"] = this["webpackJsonpstreamlit-browser"] || [],
+          u = d.push.bind(d);
+        d.push = t, d = d.slice();
+        for (var i = 0; i < d.length; i++) t(d[i]);
+        var l = u;
+        r()
+      }([])
+    </script>
+    <script src="./static/js/8.0e5ebbf7.chunk.js"></script>
+    <script src="./static/js/main.68bdddd4.chunk.js"></script>
+  </body>
+  <grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration>
+</html>
