@@ -3,14 +3,18 @@ import pandas as pd
 import streamlit as st
 from pandas_profiling import ProfileReport
 from streamlit_pandas_profiling import st_profile_report
+import streamlit.components.v1 as components
+from autoviz.AutoViz_Class import AutoViz_Class
+
+
 
 # Web App Title
 st.markdown('''
-# **The EDA App**
+# **The Exploratory Employee Attrition Analytics App**
 
 This is the **EDA App** created in Streamlit using the **pandas-profiling** library.
 
-**Credit:** App built in `Python` + `Streamlit` by [Chanin Nantasenamat](https://medium.com/@chanin.nantasenamat) (aka [Data Professor](http://youtube.com/dataprofessor))
+**Credit** - This App is built by Sherin Sneha J, Dini Shiba S, Sharwin Xavier R and Murugalakshmi V as part of IBM Naalaya thiran
 
 ---
 ''')
@@ -26,12 +30,15 @@ with st.sidebar.header('1. Upload your CSV data'):
 # """)
 
 # Pandas Profiling Report
+st.components.v1.iframe("https://eu2.ca.analytics.ibm.com/bi/?perspective=dashboard&pathRef=.my_folders%2FEmployee%2BAttrition%2BAnalytics&action=view&mode=dashboard&subView=model000001848a687b52_00000003", width=1200, height=700, scrolling=False)
+# AV = AutoViz_Class()
 if uploaded_file is not None:
     @st.cache
     def load_csv():
         csv = pd.read_csv(uploaded_file)
         return csv
     df = load_csv()
+    # df = AV.AutoViz('WA_Fn-UseC_-HR-Employee-Attrition.csv', depVar='Attrition')
     pr = ProfileReport(df, explorative=True)
     st.header('**Input DataFrame**')
     st.write(df)
@@ -56,3 +63,4 @@ else:
         st.write('---')
         st.header('**Pandas Profiling Report**')
         st_profile_report(pr)
+        
